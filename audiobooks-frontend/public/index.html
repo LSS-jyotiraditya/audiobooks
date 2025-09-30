@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiobooks</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Audiobooks Upload and Stream</h1>
+        <input type="text" id="apiBase" placeholder="API Base URL" />
+        <input type="file" id="ebookFile" />
+        <button id="uploadBtn">Upload Ebook</button>
+        <div id="uploadResult"></div>
+        
+        <input type="text" id="sessionId" placeholder="Session ID" />
+        <button id="startStream">Start Stream</button>
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="stopBtn">Stop</button>
+        <div id="statusResult"></div>
+        <button id="refreshStatus">Refresh Status</button>
+        
+        <input type="file" id="questionFile" />
+        <button id="askBtn">Ask LLM</button>
+        <div id="askResult"></div>
+        
+        <audio id="player" controls></audio>
+        <audio id="answerPlayer" controls></audio>
+        <a id="downloadLink" href="#">Download</a>
+    </div>
+    <script src="../src/frontend.js"></script>
+</body>
+</html>

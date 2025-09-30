@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+openai
+PyPDF2
+python-docx
+chromadb
+sentence-transformers
+requests
+aiofiles

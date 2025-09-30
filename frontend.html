@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audiobooks Pipeline Tester</title>
+  <link rel="stylesheet" href="./frontend.css" />
+</head>
+<body>
+  <main>
+    <h1>Audiobooks Pipeline Tester</h1>
+
+    <section id="uploader">
+      <h2>1) Upload Ebook</h2>
+      <input id="ebookFile" type="file" accept=".pdf,.docx,.txt" />
+      <button id="uploadBtn">Upload</button>
+      <pre id="uploadResult"></pre>
+    </section>
+
+    <section id="streamer">
+      <h2>2) Stream / Control</h2>
+      <div>
+        <label>Session ID: <input id="sessionId" /></label>
+        <button id="refreshStatus">Refresh Status</button>
+      </div>
+      <div style="margin-top:.5rem;">
+        <button id="startStream">Start Stream</button>
+        <button id="playBtn">Play</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="stopBtn">Stop</button>
+        <a id="downloadLink" href="#" download="stream.mp3" style="margin-left:1rem">Download stream</a>
+      </div>
+      <audio id="player" controls style="width:100%; margin-top:.5rem;"></audio>
+      <pre id="statusResult"></pre>
+    </section>
+
+    <section id="ask">
+      <h2>3) Ask (send question audio)</h2>
+      <input id="questionFile" type="file" accept="audio/*" />
+      <button id="askBtn">Send Question</button>
+      <pre id="askResult"></pre>
+      <audio id="answerPlayer" controls style="width:100%; margin-top:.5rem;"></audio>
+    </section>
+
+    <footer>
+      <label>API base:
+        <input id="apiBase" value="http://localhost:8000" style="width: 260px;" />
+      </label>
+    </footer>
+  </main>
+
+  <script src="./frontend.js"></script>
+</body>
+</html>
